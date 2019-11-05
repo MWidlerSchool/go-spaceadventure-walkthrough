@@ -32,7 +32,7 @@ func travel() {
 		if choice == "Y" {
 			travelToRandomPlanet()
 		} else if choice == "N" {
-			planetName := getPlanetName()
+			planetName := queryUser("Name the planet you would like to visit.")
 			travelToPlanet(planetName)
 		} else {
 			fmt.Println("Sorry, I didn't get that.")
@@ -43,13 +43,6 @@ func travel() {
 func travelToRandomPlanet() {
 	fmt.Println("Traveling to Jupiter...")
 	fmt.Println("Arrived at Jupiter. The large red spot appears ominous.")
-}
-
-func getPlanetName() string {
-	var name string
-	fmt.Println("Name the planet you would like to visit.")
-	fmt.Scan(&name)
-	return name
 }
 
 func travelToPlanet(planetName string) {
